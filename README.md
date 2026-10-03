@@ -30,7 +30,7 @@
 # 1. 后端 + 前端依赖
 python -m venv .venv
 .venv/bin/pip install -r requirements.txt
-cd frontend && npm install && cd ..
+cd frontend && pnpm install --frozen-lockfile && cd ..
 
 # 2. 准备 config.json(参考 §配置)
 
@@ -48,7 +48,7 @@ open http://localhost:8080
 .venv/bin/python -m app --config config.json
 
 # 终端 B:vite dev(proxy /api/* → :8080)
-cd frontend && npm run dev
+cd frontend && pnpm run dev
 # → http://localhost:5173
 ```
 
@@ -190,7 +190,7 @@ idrac-fan-control/
 
 ```bash
 # 1. 前端 build
-cd frontend && npm run build && cd ..   # → app/static/*
+cd frontend && pnpm run build && cd ..   # → app/static/*
 
 # 2. PyInstaller
 pip install pyinstaller

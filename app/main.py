@@ -559,7 +559,7 @@ def build_app(
     """构造 Starlette app。
 
     static_dir: 若提供且目录存在,挂载 `/` → StaticFiles(html=True),
-      用于托管 M6 前端 build 产物(`frontend` 跑 `npm run build` 后输出到 app/static/)。
+      用于托管 M6 前端 build 产物(`frontend` 跑 `pnpm run build` 后输出到 app/static/)。
       None 或目录不存在 → 跳过(API only,前端走 vite dev server)。
     """
     cors = cors_origins if cors_origins is not None else ["*"]

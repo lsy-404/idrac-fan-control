@@ -5,7 +5,7 @@
 ## 流程
 
 ```
-1. cd frontend && npm install && npm run build   # 产物 → ../app/static/
+1. cd frontend && pnpm install --frozen-lockfile && pnpm run build   # 产物 → ../app/static/
 2. pip install pyinstaller pywebview
 3. pyinstaller build.spec                         # 产物 → dist/idrac-fan-control(.exe)
 4. mkdir -p /opt/idrac-fan-control && cp dist/idrac-fan-control /opt/idrac-fan-control/
